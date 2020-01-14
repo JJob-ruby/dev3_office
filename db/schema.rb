@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_14_123516) do
+ActiveRecord::Schema.define(version: 2020_01_14_131941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,26 @@ ActiveRecord::Schema.define(version: 2020_01_14_123516) do
     t.date "start_date"
     t.date "end_date"
     t.boolean "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ticket_activity_logs", force: :cascade do |t|
+    t.integer "log_time"
+    t.date "log_date"
+    t.string "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "status"
+    t.integer "maximum_permitted_time"
+    t.string "category"
+    t.date "start_date"
+    t.date "end_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

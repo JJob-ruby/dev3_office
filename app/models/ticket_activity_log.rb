@@ -1,0 +1,2 @@
+class TicketActivityLog < ApplicationRecord
+end
