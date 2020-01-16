@@ -1,0 +1,14 @@
+
+<html>
+<head>
+<h2>Users in the System</h2>
+</html>
+<body>
+  <% @users.each do |user| %>
+    <tr>
+      <td><h4><%= user.name %></h4></td>
+      <td><%= user.email %></td>
+    </tr> <br><br>
+  <% end %>
+</body>
+</html>

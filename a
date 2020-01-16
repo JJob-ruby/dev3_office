@@ -15,14 +15,46 @@
                                       PUT    /users(.:format)                                                                         devise/registrations#update
                                       DELETE /users(.:format)                                                                         devise/registrations#destroy
                                       POST   /users(.:format)                                                                         devise/registrations#create
-                             profiles GET    /profiles(.:format)                                                                      profiles#index
-                                      POST   /profiles(.:format)                                                                      profiles#create
-                          new_profile GET    /profiles/new(.:format)                                                                  profiles#new
-                         edit_profile GET    /profiles/:id/edit(.:format)                                                             profiles#edit
-                              profile GET    /profiles/:id(.:format)                                                                  profiles#show
-                                      PATCH  /profiles/:id(.:format)                                                                  profiles#update
-                                      PUT    /profiles/:id(.:format)                                                                  profiles#update
-                                      DELETE /profiles/:id(.:format)                                                                  profiles#destroy
+                                users GET    /users(.:format)                                                                         users#index
+                                      POST   /users(.:format)                                                                         users#create
+                             new_user GET    /users/new(.:format)                                                                     users#new
+                            edit_user GET    /users/:id/edit(.:format)                                                                users#edit
+                                 user GET    /users/:id(.:format)                                                                     users#show
+                                      PATCH  /users/:id(.:format)                                                                     users#update
+                                      PUT    /users/:id(.:format)                                                                     users#update
+                                      DELETE /users/:id(.:format)                                                                     users#destroy
+                              tickets GET    /tickets(.:format)                                                                       tickets#index
+                                      POST   /tickets(.:format)                                                                       tickets#create
+                           new_ticket GET    /tickets/new(.:format)                                                                   tickets#new
+                          edit_ticket GET    /tickets/:id/edit(.:format)                                                              tickets#edit
+                               ticket GET    /tickets/:id(.:format)                                                                   tickets#show
+                                      PATCH  /tickets/:id(.:format)                                                                   tickets#update
+                                      PUT    /tickets/:id(.:format)                                                                   tickets#update
+                                      DELETE /tickets/:id(.:format)                                                                   tickets#destroy
+                              sprints GET    /sprints(.:format)                                                                       sprints#index
+                                      POST   /sprints(.:format)                                                                       sprints#create
+                           new_sprint GET    /sprints/new(.:format)                                                                   sprints#new
+                          edit_sprint GET    /sprints/:id/edit(.:format)                                                              sprints#edit
+                               sprint GET    /sprints/:id(.:format)                                                                   sprints#show
+                                      PATCH  /sprints/:id(.:format)                                                                   sprints#update
+                                      PUT    /sprints/:id(.:format)                                                                   sprints#update
+                                      DELETE /sprints/:id(.:format)                                                                   sprints#destroy
+                             projects GET    /projects(.:format)                                                                      projects#index
+                                      POST   /projects(.:format)                                                                      projects#create
+                          new_project GET    /projects/new(.:format)                                                                  projects#new
+                         edit_project GET    /projects/:id/edit(.:format)                                                             projects#edit
+                              project GET    /projects/:id(.:format)                                                                  projects#show
+                                      PATCH  /projects/:id(.:format)                                                                  projects#update
+                                      PUT    /projects/:id(.:format)                                                                  projects#update
+                                      DELETE /projects/:id(.:format)                                                                  projects#destroy
+              ticket_time_logss_index GET    /ticket_time_logss(.:format)                                                             ticket_time_logss#index
+                                      POST   /ticket_time_logss(.:format)                                                             ticket_time_logss#create
+                new_ticket_time_logss GET    /ticket_time_logss/new(.:format)                                                         ticket_time_logss#new
+               edit_ticket_time_logss GET    /ticket_time_logss/:id/edit(.:format)                                                    ticket_time_logss#edit
+                    ticket_time_logss GET    /ticket_time_logss/:id(.:format)                                                         ticket_time_logss#show
+                                      PATCH  /ticket_time_logss/:id(.:format)                                                         ticket_time_logss#update
+                                      PUT    /ticket_time_logss/:id(.:format)                                                         ticket_time_logss#update
+                                      DELETE /ticket_time_logss/:id(.:format)                                                         ticket_time_logss#destroy
                                  root GET    /                                                                                        welcome#index
         rails_mandrill_inbound_emails POST   /rails/action_mailbox/mandrill/inbound_emails(.:format)                                  action_mailbox/ingresses/mandrill/inbound_emails#create
         rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create

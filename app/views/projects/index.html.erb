@@ -1,0 +1,18 @@
+<html>
+
+<head>
+<h1>Listing Projects</h1>
+</head>
+
+
+ 
+<body>
+  <% @projects.each do |project| %>
+    <tr>
+      <td><h4><%= project.name %></h4></td>
+      <td><%= project.user_id %></td>
+    </tr> <br><br>
+  <% end %>
+</body>
+
+</html>
